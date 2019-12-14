@@ -1,0 +1,180 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://MiniMap/Minimap.gd" type="Script" id=1]
+[ext_resource path="res://MiniMap/bg.png" type="Texture" id=2]
+[ext_resource path="res://MiniMap/player in.png" type="Texture" id=3]
+[ext_resource path="res://MiniMap/Sprite-0004.png" type="Texture" id=4]
+[ext_resource path="res://MiniMap/Sprite-0003.png" type="Texture" id=5]
+[ext_resource path="res://MiniMap/Goal.png" type="Texture" id=6]
+
+[node name="Minimap" type="Node2D"]
+position = Vector2( 360.982, 79.1793 )
+z_index = 80
+script = ExtResource( 1 )
+
+[node name="Sprite_BG" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Sprite_PMiddle" type="Sprite" parent="."]
+visible = false
+z_index = 80
+texture = ExtResource( 3 )
+
+[node name="Sprite_PTop" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, -16 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_PTopLeft" type="Sprite" parent="."]
+visible = false
+position = Vector2( -24, -16 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_PLeft" type="Sprite" parent="."]
+visible = false
+position = Vector2( -24, 0 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_PBottomLeft" type="Sprite" parent="."]
+visible = false
+position = Vector2( -24, 16 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_PBottom" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, 16 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_PBottomRight" type="Sprite" parent="."]
+visible = false
+position = Vector2( 24, 16 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_PRight" type="Sprite" parent="."]
+visible = false
+position = Vector2( 24, 0 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_PTopRight" type="Sprite" parent="."]
+visible = false
+position = Vector2( 24, -16 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_CMiddle" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 4 )
+
+[node name="Sprite_CTop" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, -16 )
+z_index = 80
+texture = ExtResource( 4 )
+
+[node name="Sprite_CTopLeft" type="Sprite" parent="."]
+visible = false
+position = Vector2( -24, -16 )
+z_index = 80
+texture = ExtResource( 4 )
+
+[node name="Sprite_CLeft" type="Sprite" parent="."]
+visible = false
+position = Vector2( -24, 0 )
+z_index = 80
+texture = ExtResource( 4 )
+
+[node name="Sprite_CBottomLeft" type="Sprite" parent="."]
+visible = false
+position = Vector2( -24, 16 )
+texture = ExtResource( 4 )
+
+[node name="Sprite_CBottom" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, 16 )
+texture = ExtResource( 4 )
+
+[node name="Sprite_CBottomRight" type="Sprite" parent="."]
+visible = false
+position = Vector2( 24, 16 )
+texture = ExtResource( 4 )
+
+[node name="Sprite_CRight" type="Sprite" parent="."]
+visible = false
+position = Vector2( 24, 0 )
+texture = ExtResource( 4 )
+
+[node name="Sprite_CTopRight" type="Sprite" parent="."]
+visible = false
+position = Vector2( 24, -16 )
+texture = ExtResource( 4 )
+
+[node name="Sprite_VTop" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, -16 )
+texture = ExtResource( 5 )
+
+[node name="Sprite_VTopLeft" type="Sprite" parent="."]
+visible = false
+position = Vector2( -24, -16 )
+texture = ExtResource( 5 )
+
+[node name="Sprite_VLeft" type="Sprite" parent="."]
+visible = false
+position = Vector2( -24, 0 )
+texture = ExtResource( 5 )
+
+[node name="Sprite_VBottomLeft" type="Sprite" parent="."]
+visible = false
+position = Vector2( -24, 16 )
+texture = ExtResource( 5 )
+
+[node name="Sprite_VBottom" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, 16 )
+texture = ExtResource( 5 )
+
+[node name="Sprite_VBottomRight" type="Sprite" parent="."]
+visible = false
+position = Vector2( 24, 16 )
+texture = ExtResource( 5 )
+
+[node name="Sprite_VRight" type="Sprite" parent="."]
+visible = false
+position = Vector2( 24, 0 )
+texture = ExtResource( 5 )
+
+[node name="Sprite_VTopRight" type="Sprite" parent="."]
+visible = false
+position = Vector2( 24, -16 )
+texture = ExtResource( 5 )
+
+[node name="Sprite_GTop" type="Sprite" parent="."]
+position = Vector2( 0, -16 )
+texture = ExtResource( 6 )
+
+[node name="Sprite_GTopLeft" type="Sprite" parent="."]
+position = Vector2( -24, -16 )
+texture = ExtResource( 6 )
+
+[node name="Sprite_GLeft" type="Sprite" parent="."]
+position = Vector2( -24, 0 )
+texture = ExtResource( 6 )
+
+[node name="Sprite_GBottomLeft" type="Sprite" parent="."]
+position = Vector2( -24, 16 )
+texture = ExtResource( 6 )
+
+[node name="Sprite_GBottom" type="Sprite" parent="."]
+position = Vector2( 0, 16 )
+texture = ExtResource( 6 )
+
+[node name="Sprite_GBottomRight" type="Sprite" parent="."]
+position = Vector2( 24, 16 )
+texture = ExtResource( 6 )
+
+[node name="Sprite_GRight" type="Sprite" parent="."]
+position = Vector2( 24, 0 )
+texture = ExtResource( 6 )
+
+[node name="Sprite_GTopRight" type="Sprite" parent="."]
+position = Vector2( 24, -16 )
+texture = ExtResource( 6 )

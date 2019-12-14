@@ -1,0 +1,88 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Init/Init.gd" type="Script" id=1]
+[ext_resource path="res://Init/CheckNetwork.gd" type="Script" id=2]
+[ext_resource path="res://healthBar_background.png" type="Texture" id=3]
+[ext_resource path="res://healthBar_health.png" type="Texture" id=4]
+[ext_resource path="res://Init/Loadingbar.gd" type="Script" id=5]
+[ext_resource path="res://UI/K-029.jpg" type="Texture" id=6]
+[ext_resource path="res://Init/LoadingbarChar.gd" type="Script" id=7]
+[ext_resource path="res://character.png" type="Texture" id=8]
+[ext_resource path="res://UI/goal.png" type="Texture" id=9]
+[ext_resource path="res://UI/K-129.jpg" type="Texture" id=10]
+[ext_resource path="res://UI/K-130.jpg" type="Texture" id=11]
+
+[sub_resource type="CapsuleShape2D" id=1]
+height = 3.23517
+
+[node name="Node2D" type="Control"]
+script = ExtResource( 1 )
+
+[node name="HTTPCheckNetwork" type="HTTPRequest" parent="."]
+script = ExtResource( 2 )
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+margin_left = 11.4798
+margin_top = 235.888
+margin_right = 161.48
+margin_bottom = 275.888
+rect_scale = Vector2( 3, 1 )
+max_value = 3.0
+step = 0.6
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+script = ExtResource( 5 )
+
+[node name="background_sprite" type="Sprite" parent="."]
+position = Vector2( 239.694, 132.549 )
+scale = Vector2( 3.20532, 1.82395 )
+z_index = -4
+texture = ExtResource( 6 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( -2.09502, 5.58673 )
+script = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 41.9003, 227.658 )
+texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 0, 33.5867, 17.2011, 31.7229 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 42.5986, 227.658 )
+shape = SubResource( 1 )
+
+[node name="Goal_sprite" type="Sprite" parent="."]
+position = Vector2( 424.24, 226.96 )
+scale = Vector2( 0.188698, 0.205622 )
+z_index = -3
+texture = ExtResource( 9 )
+
+[node name="Goal_sprite2" type="Sprite" parent="."]
+position = Vector2( 424.305, 243.849 )
+scale = Vector2( 0.204759, 0.328921 )
+z_index = -2
+texture = ExtResource( 6 )
+
+[node name="Error" type="Label" parent="."]
+margin_left = 160.441
+margin_top = 224.962
+margin_right = 322.441
+margin_bottom = 238.962
+custom_colors/font_color = Color( 0.0862745, 0.478431, 0.737255, 1 )
+custom_colors/font_color_shadow = Color( 0.560784, 0.560784, 0.560784, 1 )
+custom_constants/shadow_offset_x = 0
+align = 2
+
+[node name="School_sprite" type="Sprite" parent="."]
+position = Vector2( 80, 29 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 10 )
+
+[node name="Survivial_sprite" type="Sprite" parent="."]
+position = Vector2( 260, 30 )
+scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 11 )
+[connection signal="connection_success" from="HTTPCheckNetwork" to="." method="_on_HTTPCheckNetwork_connection_success"]
+[connection signal="error_connection_failed" from="HTTPCheckNetwork" to="." method="_on_HTTPCheckNetwork_error_connection_failed"]

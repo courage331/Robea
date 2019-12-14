@@ -1,0 +1,229 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://SceneFolder/OptionScene.gd" type="Script" id=1]
+[ext_resource path="res://UI/K-093.jpg" type="Texture" id=2]
+[ext_resource path="res://UI/K-090.jpg" type="Texture" id=3]
+[ext_resource path="res://UI/K-096.jpg" type="Texture" id=4]
+[ext_resource path="res://UI/plus-flat.png" type="Texture" id=5]
+[ext_resource path="res://UI/action_022-remove-delete-subtract-minus-512.png" type="Texture" id=6]
+[ext_resource path="res://healthBar_background.png" type="Texture" id=7]
+[ext_resource path="res://healthBar_health.png" type="Texture" id=8]
+[ext_resource path="res://UI/K-097.jpg" type="Texture" id=9]
+[ext_resource path="res://SceneFolder/GameBgm.gd" type="Script" id=10]
+[ext_resource path="res://UI/K-109.jpg" type="Texture" id=11]
+[ext_resource path="res://SceneFolder/EffectVolume.gd" type="Script" id=12]
+[ext_resource path="res://UI/K-128.jpg" type="Texture" id=13]
+[ext_resource path="res://UI/K-029.jpg" type="Texture" id=14]
+
+[sub_resource type="ImageTexture" id=1]
+
+[sub_resource type="AtlasTexture" id=2]
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends TextureProgress
+
+
+
+func _ready():
+	max_value = 24
+	min_value = -80
+	
+	
+func volume_up():
+	
+	value +=8
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index(\"MenuBgm\"), value)
+	print(AudioServer.get_bus_index(\"MenuBgm\"))
+	
+	#vol = AudioServer.set_bus_volume_db(AudioServer.get_bus_index(\"MenuBgm\"), value)
+	
+func volume_down():
+	
+	value -=8
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index(\"MenuBgm\"), value)
+	print(AudioServer.get_bus_index(\"MenuBgm\"))
+
+	#vol = AudioServer.set_bus_volume_db(AudioServer.get_bus_index(\"MenuBgm\"), value)
+	
+	
+	"
+
+[node name="Scene2" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -547.268
+margin_top = -321.663
+margin_right = -287.268
+margin_bottom = -148.663
+rect_scale = Vector2( 0.2, 0.2 )
+rect_pivot_offset = Vector2( 402.03, 248.555 )
+icon = SubResource( 1 )
+
+[node name="Back_sprite" type="Sprite" parent="Button"]
+position = Vector2( 124.475, 81.7073 )
+scale = Vector2( 1.23224, 2.19061 )
+texture = ExtResource( 2 )
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 424.0
+margin_top = 6.0
+margin_right = 916.0
+margin_bottom = 402.0
+rect_scale = Vector2( 0.1, 0.1 )
+icon = SubResource( 2 )
+
+[node name="Home_sprite" type="Sprite" parent="Button2"]
+position = Vector2( 244.854, 205.195 )
+scale = Vector2( 2.78996, 2.57199 )
+texture = ExtResource( 3 )
+
+[node name="MenuBgm_text" type="Sprite" parent="."]
+position = Vector2( 100, 112 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+
+[node name="Plus" type="Button" parent="."]
+editor/display_folded = true
+margin_left = 368.542
+margin_top = 102.05
+margin_right = 391.542
+margin_bottom = 122.05
+
+[node name="Sprite" type="Sprite" parent="Plus"]
+position = Vector2( 11.4507, 9.86267 )
+scale = Vector2( 0.139133, 0.108654 )
+texture = ExtResource( 5 )
+
+[node name="Minus" type="Button" parent="."]
+editor/display_folded = true
+margin_left = 178.055
+margin_top = 99.7903
+margin_right = 192.055
+margin_bottom = 121.79
+
+[node name="Sprite" type="Sprite" parent="Minus"]
+position = Vector2( 6.45532, 11.6146 )
+scale = Vector2( 0.0628865, 0.0614837 )
+texture = ExtResource( 6 )
+
+[node name="MenuVolume" type="TextureProgress" parent="."]
+margin_left = 205.327
+margin_top = 94.4963
+margin_right = 355.327
+margin_bottom = 134.496
+min_value = -80.0
+max_value = 24.0
+step = 8.0
+value = -16.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 8 )
+script = SubResource( 3 )
+
+[node name="GameBgm_text" type="Sprite" parent="."]
+position = Vector2( 100, 175 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 9 )
+
+[node name="Plus2" type="Button" parent="."]
+editor/display_folded = true
+margin_left = 371.0
+margin_top = 164.0
+margin_right = 394.0
+margin_bottom = 184.0
+
+[node name="Sprite" type="Sprite" parent="Plus2"]
+position = Vector2( 10.96, 9.16357 )
+scale = Vector2( 0.132269, 0.12951 )
+texture = ExtResource( 5 )
+
+[node name="Minus2" type="Button" parent="."]
+editor/display_folded = true
+margin_left = 177.0
+margin_top = 164.0
+margin_right = 197.0
+margin_bottom = 185.0
+
+[node name="Sprite" type="Sprite" parent="Minus2"]
+position = Vector2( 10.7344, 11.1252 )
+scale = Vector2( 0.0665987, 0.0677328 )
+texture = ExtResource( 6 )
+
+[node name="GameVolume" type="TextureProgress" parent="."]
+margin_left = 207.165
+margin_top = 155.21
+margin_right = 357.165
+margin_bottom = 195.21
+min_value = -80.0
+max_value = 24.0
+step = 8.0
+value = -16.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 8 )
+script = ExtResource( 10 )
+
+[node name="Effect_text" type="Sprite" parent="."]
+position = Vector2( 100.698, 232.693 )
+scale = Vector2( 0.235143, 0.3 )
+texture = ExtResource( 11 )
+
+[node name="Plus3" type="Button" parent="."]
+editor/display_folded = true
+margin_left = 371.0
+margin_top = 224.693
+margin_right = 394.0
+margin_bottom = 244.693
+
+[node name="Sprite" type="Sprite" parent="Plus3"]
+position = Vector2( 12.6052, 9.61975 )
+scale = Vector2( 0.118887, 0.142211 )
+texture = ExtResource( 5 )
+
+[node name="Minus3" type="Button" parent="."]
+editor/display_folded = true
+margin_left = 177.0
+margin_top = 224.693
+margin_right = 200.0
+margin_bottom = 244.693
+
+[node name="Sprite" type="Sprite" parent="Minus3"]
+position = Vector2( 11.61, 10.2832 )
+scale = Vector2( 0.070945, 0.0761279 )
+texture = ExtResource( 6 )
+
+[node name="EffectVolume" type="TextureProgress" parent="."]
+margin_left = 207.652
+margin_top = 216.277
+margin_right = 357.652
+margin_bottom = 256.277
+min_value = -80.0
+max_value = 24.0
+step = 8.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 8 )
+script = ExtResource( 12 )
+
+[node name="Option_sprite" type="Sprite" parent="."]
+position = Vector2( 240, 40.021 )
+scale = Vector2( 0.496695, 0.411213 )
+texture = ExtResource( 13 )
+
+[node name="BackGround" type="Sprite" parent="."]
+position = Vector2( 239.262, 133.895 )
+scale = Vector2( 3.20721, 1.81265 )
+z_index = -2
+texture = ExtResource( 14 )
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Plus" to="." method="_on_Plus_pressed"]
+[connection signal="pressed" from="Minus" to="." method="_on_Minus_pressed"]
+[connection signal="pressed" from="Plus2" to="." method="_on_Plus2_pressed"]
+[connection signal="pressed" from="Minus2" to="." method="_on_Minus2_pressed"]
+[connection signal="pressed" from="Plus3" to="." method="_on_Plus3_pressed"]
+[connection signal="pressed" from="Minus3" to="." method="_on_Minus3_pressed"]

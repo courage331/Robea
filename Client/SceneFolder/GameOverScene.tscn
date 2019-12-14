@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GameOverScene.gd" type="Script" id=1]
+[ext_resource path="res://UI/K-089.jpg" type="Texture" id=2]
+[ext_resource path="res://UI/K-088.jpg" type="Texture" id=3]
+[ext_resource path="res://UI/K-029.jpg" type="Texture" id=4]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.62903
+margin_right = 1.62903
+script = ExtResource( 1 )
+
+[node name="BookImage" type="Sprite" parent="."]
+position = Vector2( 244.153, 105.075 )
+scale = Vector2( 0.656072, 0.606617 )
+texture = ExtResource( 2 )
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 363.722
+margin_top = 229.039
+margin_right = 805.722
+margin_bottom = 300.039
+rect_scale = Vector2( 0.2, 0.5 )
+text = "Text"
+
+[node name="Exit_sprite" type="Sprite" parent="Button2"]
+position = Vector2( 238.135, 32 )
+scale = Vector2( 2.5, 1 )
+texture = ExtResource( 3 )
+
+[node name="BackGround" type="Sprite" parent="."]
+position = Vector2( 237.471, 135.143 )
+scale = Vector2( 3.20965, 1.8248 )
+z_index = -2
+texture = ExtResource( 4 )
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]

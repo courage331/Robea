@@ -1,0 +1,404 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://MiniMap/FullMap.gd" type="Script" id=1]
+[ext_resource path="res://MiniMap/bg.png" type="Texture" id=2]
+[ext_resource path="res://MiniMap/Sprite-0004.png" type="Texture" id=3]
+
+[node name="FullMap" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="MinimapButton" type="Button" parent="."]
+
+[node name="Map" type="Node2D" parent="MinimapButton"]
+editor/display_folded = true
+visible = false
+position = Vector2( 240, 135 )
+
+[node name="Sprite_BG" type="Sprite" parent="MinimapButton/Map"]
+scale = Vector2( 5.5, 5.5 )
+texture = ExtResource( 2 )
+
+[node name="Sprite_00" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -168, -112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_01" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -168, -80 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_02" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -168, -48 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_03" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -168, -16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_04" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -168, 16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_05" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -168, 48 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_06" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -168, 80 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_07" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -168, 112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_10" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -120, -112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_11" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -120, -80 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_12" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -120, -48 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_13" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -120, -16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_14" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -120, 16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_15" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -120, 48 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_16" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -120, 80 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_17" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -120, 112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_20" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -72, -112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_21" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -72, -80 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_22" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -72, -48 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_23" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -72, -16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_24" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -72, 16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_25" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -72, 48 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_26" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -72, 80 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_27" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -72, 112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_30" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -24, -112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_31" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -24, -80 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_32" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -24, -48 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_33" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -24, -16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_34" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -24, 16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_35" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -24, 48 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_36" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -24, 80 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_37" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( -24, 112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_40" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 24, -112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_41" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 24, -80 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_42" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 24, -48 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_43" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 24, -16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_44" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 24, 16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_45" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 24, 48 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_46" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 24, 80 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_47" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 24, 112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_50" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 72, -112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_51" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 72, -80 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_52" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 72, -48 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_53" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 72, -16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_54" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 72, 16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_55" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 72, 48 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_56" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 72, 80 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_57" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 72, 112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_60" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 120, -112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_61" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 120, -80 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_62" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 120, -48 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_63" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 120, -16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_64" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 120, 16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_65" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 120, 48 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_66" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 120, 80 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_67" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 120, 112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_70" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 168, -112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_71" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 168, -80 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_72" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 168, -48 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_73" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 168, -16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_74" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 168, 16 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_75" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 168, 48 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_76" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 168, 80 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite_77" type="Sprite" parent="MinimapButton/Map"]
+visible = false
+position = Vector2( 168, 112 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+[connection signal="pressed" from="MinimapButton" to="." method="_on_MinimapButton_pressed"]
